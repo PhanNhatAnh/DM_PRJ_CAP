@@ -1,0 +1,70 @@
+/* 
+    Created on : 19-02-2016, 11:56:30
+    Author     : thuong
+*/
+body *:not(i){
+    font-family: Arial !important;
+    font-size: 12px
+}
+.tdc_heading{
+    font-size: 21px;
+    color: black;
+    line-height: 40px;
+    display: block;
+}
+.banner{
+    height: 260px;
+    width: 100%
+}
+.banner img{
+    height: 260px;
+    width: 100% !important
+}
+.main-nav{
+    background-color: #6B5941;
+    color: white !important;
+}
+.navbar-default .navbar-nav>li>a{
+    color: white !important;
+}
+.navbar{
+    border: none;
+}
+.navbar-default .navbar-nav>li.active{
+    background-color: #948064 !important;
+}
+.navbar-default .navbar-nav>li.active>a{
+    background: #948064 !important;
+}
+.frm_search{
+    border: 1px solid #6B5941;
+    min-height: 46px;
+    padding: 15px;
+}
+#searchfield{
+    width: 280px;
+}
+form.form-inline{
+    text-align: center;
+}
+.ct{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+a{
+    color: black;
+}
+input[type='text'], select{
+    /*width: 206px !important;*/
+}
+.limit_with{
+    width: 206px !important;
+    display: inline !important;
+}
+table{
+    min-width: 350px;
+}
+.chosen-container{
+    /*max-width: 350px !important;*/
+    max-width: 235px !important;
+}
