@@ -13,10 +13,11 @@
     <div class="container-fluid  main-nav">
         <ul class="nav navbar-nav">
             <li class="active"><a href="Home">Trang chủ</a></li>
-            <li><a href="?page=404">Hướng dẫn sử dụng</a></li>
+            <li><a href="addUser">Add User</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li class=""><a href="?page=home">Đăng nhập</a></li>
+            <li class=""><a href="#">${sessionScope.USER.fullName}</a></li>
+            <li class=""><a href="logout">Đăng xuất</a></li>
         </ul>
     </div> <!-- End .container-fluid  main-nav -->
 </nav> <!-- End .navbar -->

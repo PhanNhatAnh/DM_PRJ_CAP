@@ -5,6 +5,7 @@
  */
 package Servlet;
 
+import Service.IConstant;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -19,8 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class view extends HttpServlet {
 
-    private final String viewPage = "view.jsp";
-    private final String LayoutServlet = "LayoutServlet";
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -35,9 +35,10 @@ public class view extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            request.setAttribute("PAGE", viewPage);
+            IConstant iConstant = new IConstant();
+            request.setAttribute("PAGE", iConstant.viewPage);
             
-            RequestDispatcher rd = request.getRequestDispatcher(LayoutServlet);
+            RequestDispatcher rd = request.getRequestDispatcher(iConstant.LayoutServlet);
             rd.forward(request, response);
         }
     }

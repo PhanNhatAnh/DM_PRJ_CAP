@@ -5,7 +5,6 @@
  */
 package Servlet;
 
-import Entity.Account;
 import Service.IConstant;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -14,14 +13,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author Aking
  */
-public class Home extends HttpServlet {
-
+public class addUser extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,20 +35,16 @@ public class Home extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             IConstant iConstant = new IConstant();
-            HttpSession session = request.getSession();
-            Account user = (Account) session.getAttribute("USER");
-
-            if (user != null) {
-                request.setAttribute("PAGE", iConstant.homePage);
+            String addUser = request.getParameter("addUser");
+            if (addUser == null) {
+                request.setAttribute("PAGE", iConstant.addUserPage);
 
                 RequestDispatcher rd = request.getRequestDispatcher(iConstant.LayoutServlet);
                 rd.forward(request, response);
             } else {
-
-                RequestDispatcher rd = request.getRequestDispatcher(iConstant.loginPage);
-                rd.forward(request, response);
+                
             }
-
+            
         }
     }
 
