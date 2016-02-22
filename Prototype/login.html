@@ -1,0 +1,86 @@
+<?php
+$plugin_path = '/UserManager/';
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />    
+        <title>
+            ABC site
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+        <!-- Use font-awesome lib-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+        <!-- User jquery-->
+        <script src="js/jquery-1.12.0.min.js"></script>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    </head>
+    <body class="skin-blue">   
+        <div id="content" style="margin-top: 50px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-offset-4 col-sm-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h1 class="panel-title">
+                                    <i class="glyphicon glyphicon-lock"></i>
+                                    Login
+                                </h1>
+                            </div><!--panel-heading-->
+                            <div class="panel-body">
+                                <div class="alert alert-danger">
+                                    <i class="glyphicon glyphicon-exclamation-sign"></i>
+                                    Sai tên đăng nhập hoặc mật khẩu.
+                                    <button type="button" class="close" data-dismiss="alert">x</button>
+                                </div>
+
+                                <form action="" method="POST">
+                                    <div class="form-group">
+                                        <label for"input-username">User name:</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-user"></i>
+                                            </span>
+                                            <input type="text" name="username" placeholder="User name" id="input-username" class="form-control">
+                                        </div><!--input-group-->
+                                    </div><!--form-group-->
+
+                                    <div class="form-group">
+                                        <label for"input-username">Password</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-lock"></i>
+                                            </span>
+                                            <input type="text" name="username" placeholder="Password" id="input-username" class="form-control"> 
+                                        </div><!--input-group-->
+                                        <span class="help-block">
+                                            <a href="">Forget Password</a>
+                                        </span>
+                                    </div><!--form-group-->
+                                    <div class="text-right">
+                                        <button type="submit" class="btn btn-primary">
+                                            <i class="glyphicon glyphicon-log-in"></i>
+                                            Login
+                                        </button>
+                                    </div><!--text-right-->
+                                </form>
+                            </div><!--panel-body-->
+
+                        </div><!--panel-->
+                    </div><!--offset-4-->
+
+                </div><!--row-->
+            </div><!--container-->
+        </div><!--content-->
+    </body>
+</html>

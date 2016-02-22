@@ -7,6 +7,8 @@ package Service;
 
 import Entity.Account;
 import ExEntityJPAControl.ExAccountJpaController;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.persistence.EntityManagerFactory;
 
 /**
@@ -15,7 +17,6 @@ import javax.persistence.EntityManagerFactory;
  */
 public class AccountService extends BaseService {
     /* Request Jpa controller. */
-
     private final ExAccountJpaController controller;
 
     /**
@@ -32,5 +33,14 @@ public class AccountService extends BaseService {
 
     public Account checkLogin(String username, String password) {
         return controller.checkLogin(username, password);
+    }
+
+    public void createNewAccount(Account account) {
+        try {
+//            System.out.println("ACC:" + account.toString());
+            controller.create(account);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 }

@@ -12,8 +12,10 @@ package Service;
 public class IConstant {
     /* Page */
     public static final String layoutPage = "layout.jsp";
-    public static final String loginPage = "login.jsp";
+    public static final String loginPage = "login.html";
+    public static final String changePassPage = "changepassword.html";
     public static final String homePage = "home.jsp";
+    public static final String editAccountPage = "editAccounts.jsp";
     public static final String searchPage = "search.jsp";
     public static final String viewPage = "view.jsp";
     public static final String addUserPage = "addUser.jsp";

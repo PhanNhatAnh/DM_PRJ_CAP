@@ -140,7 +140,9 @@ public class Account implements Serializable {
 
     @Override
     public String toString() {
-        return "Entity.Account[ id=" + id + " ]";
+        return "Account{" + "id=" + id + ", mail=" + mail + ", passwords=" + passwords + ", fullName=" + fullName + ", roleID=" + roleID + ", roomAccountList=" + roomAccountList + '}';
     }
+
+    
     
 }

@@ -5,9 +5,14 @@
  */
 package Servlet;
 
+import Entity.Account;
+import Entity.Role;
+import Service.AccountService;
 import Service.IConstant;
+import Service.RoleService;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -36,15 +41,44 @@ public class addUser extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
             IConstant iConstant = new IConstant();
             String addUser = request.getParameter("addUser");
+
+            RoleService roleService = new RoleService();
+            List<Role> roles = roleService.listAllRole();
+
             if (addUser == null) {
+                
+                request.setAttribute("ROLES", roles);
                 request.setAttribute("PAGE", iConstant.addUserPage);
 
                 RequestDispatcher rd = request.getRequestDispatcher(iConstant.LayoutServlet);
                 rd.forward(request, response);
             } else {
+                String fullname = request.getParameter("full_name");
+                String email = request.getParameter("email");
+                String role = request.getParameter("role");
+
+                // Random alphabetic string
+                final int PASSWORD_LENGTH = 8;
+                StringBuffer sb = new StringBuffer();
+                for (int x = 0; x < PASSWORD_LENGTH; x++) {
+                    sb.append((char) ((int) (Math.random() * 26) + 97));
+                }
+                String pass = sb.toString();
+
+                Role r = roleService.findByID(Integer.parseInt(role));
+                AccountService accountService = new AccountService();
+                Account account = new Account(5, email, pass, fullname);
+                account.setRoleID(r);
+                accountService.createNewAccount(account);
                 
+                request.setAttribute("MESSAGE", "Sussecc!!!");
+                request.setAttribute("ROLES", roles);
+                request.setAttribute("PAGE", iConstant.addUserPage);
+
+                RequestDispatcher rd = request.getRequestDispatcher(iConstant.LayoutServlet);
+                rd.forward(request, response);
             }
-            
+
         }
     }
 
