@@ -13,7 +13,7 @@
     <div class="container-fluid  main-nav">
         <ul class="nav navbar-nav">
             <li class="active"><a href="Home">Trang chủ</a></li>
-            <li><a href="addUser">Add User</a></li>
+            <li><a href="editAccount">Manager Accounts</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class=""><a href="#">${sessionScope.USER.fullName}</a></li>

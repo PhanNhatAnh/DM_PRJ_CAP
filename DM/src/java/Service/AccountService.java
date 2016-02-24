@@ -6,7 +6,9 @@
 package Service;
 
 import Entity.Account;
+import EntityJPAControl.exceptions.NonexistentEntityException;
 import ExEntityJPAControl.ExAccountJpaController;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.persistence.EntityManagerFactory;
@@ -39,6 +41,24 @@ public class AccountService extends BaseService {
         try {
 //            System.out.println("ACC:" + account.toString());
             controller.create(account);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    public List<Account> listAllAccount() {
+        return controller.findAccountEntities();
+    }
+
+    public Account findByID(int parseInt) {
+        return controller.findAccount(parseInt);
+    }
+
+    public void editAccount(Account account) {
+        try {
+            controller.edit(account);
+        } catch (NonexistentEntityException ex) {
+            ex.printStackTrace();
         } catch (Exception ex) {
             ex.printStackTrace();
         }

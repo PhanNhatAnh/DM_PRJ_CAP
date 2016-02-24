@@ -4,6 +4,7 @@
     Author     : Aking
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div class="panel panel-default">
     <div class="panel-heading">
@@ -17,13 +18,20 @@
                         <input type="text" name="search" placeholder="Keyword" class="form-control" id="input-search">
                     </div><!--form-group-->
                 </div><!--col-md-6-->
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="button_search">
                         <button type="submit" id="button-print" data-toggle="tooltip" class="btn btn-info" data-original-title="Export to Excel">
                             <i class="glyphicon glyphicon-search"></i>Search
                         </button>
                     </div><!--button_search-->
-                </div><!--col-sm-4-->
+                </div><!--col-md-4-->
+                <div class="col-md-2">
+                    <div class="button_search">
+                        <a href="addUser" id="button-print" data-toggle="tooltip" class="btn btn-info">
+                            <i class="glyphicon glyphicon-plus"></i>Create New
+                        </a>
+                    </div><!--button_search-->
+                </div><!--col-md-2-->
             </div><!--row-->
         </div><!--well-->
         <div class="container">
@@ -33,7 +41,7 @@
                 <table class="table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <td class="text-left"><a href="">ID</a></td>
+                            <td class="text-left"><a href="">No.</a></td>
                             <td class="text-left"><a href="">Full Name</a></td>
                             <td class="text-left"><a href="">Email</a></td>
                             <td class="text-left"><a href="">Role</a></td>
@@ -41,46 +49,22 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>acb@gmail.com</td>
-                            <td>Duong Hoang</td>
-                            <td>Admin</td>
-                            <td style="text-align: center">
-                                <a href="#edit" class="btn btn-sm btn-primary"><i class="fa fa-edit" ></i> Edit</a>
-                                <a href="#delete" class="btn btn-sm btn-warning"><i class="fa fa-times"></i> Delete</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>acb2@gmail.com</td>
-                            <td>Duong Hoang2</td>
-                            <td>Admin</td>
-                            <td style="text-align: center">
-                                <a href="#edit" class="btn btn-sm btn-primary"><i class="fa fa-edit" ></i> Edit</a>
-                                <a href="#delete" class="btn btn-sm btn-warning"><i class="fa fa-times"></i> Delete</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>acb3@gmail.com</td>
-                            <td>Duong Hoang3</td>
-                            <td>Admin</td>
-                            <td style="text-align: center">
-                                <a href="#edit" class="btn btn-sm btn-primary"><i class="fa fa-edit" ></i> Edit</a>
-                                <a href="#delete" class="btn btn-sm btn-warning"><i class="fa fa-times"></i> Delete</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>acb4@gmail.com</td>
-                            <td>Duong Hoang4</td>
-                            <td>Admin</td>
-                            <td style="text-align: center">
-                                <a href="#edit" class="btn btn-sm btn-primary"><i class="fa fa-edit" ></i> Edit</a>
-                                <a href="#delete" class="btn btn-sm btn-warning"><i class="fa fa-times"></i> Delete</a>
-                            </td>
-                        </tr>
+                        <c:forEach var="acc" items="${requestScope.ACCOUNTS}" varStatus="i">
+                        <form action="editAccount" method="POST">
+                            <tr>
+                                <td><input type="hidden" name="id" value="${acc.id}"/> ${i.count}</td>
+                                <td><input type="text" name="fullname" value="${acc.fullName}"/></td>
+                                <td><input type="text" name="mail" value="${acc.mail}"/></td>
+                                <td>${acc.roleID.roleName}</td>
+                                <td style="text-align: center">
+                                    <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-edit" ></i> Edit</button>
+                                    <a href="#delete" class="btn btn-sm btn-warning"><i class="fa fa-times"></i> Delete</a>
+                                </td>
+                            </tr>
+                        </form>
+                            
+                        </c:forEach>
+
                     </tbody>
                 </table>
             </div><!--table-responsive-->
@@ -97,4 +81,3 @@
         </div><!--pagination-->
     </div><!--panel-body-->
 </div><!--panel-->
-</div>

@@ -28,6 +28,10 @@
         <servlet-name>addUser</servlet-name>
         <servlet-class>Servlet.addUser</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>editAccount</servlet-name>
+        <servlet-class>Servlet.editAccount</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LayoutServlet</servlet-name>
         <url-pattern>/LayoutServlet</url-pattern>
@@ -55,6 +59,10 @@
     <servlet-mapping>
         <servlet-name>addUser</servlet-name>
         <url-pattern>/addUser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>editAccount</servlet-name>
+        <url-pattern>/editAccount</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

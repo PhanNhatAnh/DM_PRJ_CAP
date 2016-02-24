@@ -6,9 +6,11 @@
 package Servlet;
 
 import Entity.Account;
+import Service.AccountService;
 import Service.IConstant;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -20,7 +22,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author Aking
  */
-public class Home extends HttpServlet {
+public class editAccount extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -44,7 +46,21 @@ public class Home extends HttpServlet {
                 rd.forward(request, response);
 
             } else {
-                request.setAttribute("PAGE", IConstant.homePage);
+                AccountService accountService = new AccountService();
+                String id = request.getParameter("id");
+                if (id != null) {
+                    String fullname = request.getParameter("fullname");
+                    String email = request.getParameter("mail");
+                    
+                    Account account = accountService.findByID(Integer.parseInt(id));
+                    account.setFullName(fullname);
+                    account.setMail(email);
+                    accountService.editAccount(account);
+                }
+                
+                List<Account> accounts = accountService.listAllAccount();
+                request.setAttribute("ACCOUNTS", accounts);
+                request.setAttribute("PAGE", IConstant.editAccountPage);
 
                 RequestDispatcher rd = request.getRequestDispatcher(IConstant.LayoutServlet);
                 rd.forward(request, response);
