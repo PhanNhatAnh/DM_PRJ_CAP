@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 28, 2016 2:13:38 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="DM" name="model.pojo.Document" optimistic-lock="version" schema="dbo" table="Document">
+    <id name="documentId" type="int">
+      <column name="DocumentId"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="model.pojo.Category" fetch="select" name="category" lazy="false">
+      <column name="CategoryId"/>
+    </many-to-one>
+    <many-to-one class="model.pojo.FormatFile" fetch="select" name="formatfile" lazy="false">
+      <column name="Type"/>
+    </many-to-one>
+    <many-to-one class="model.pojo.Users" fetch="select" name="user" lazy="false">
+      <column name="UserUpload"/>
+    </many-to-one>
+    <property name="documentName" type="string">
+      <column length="2000" name="DocumentName" not-null="true"/>
+    </property>
+    <property name="dateIssued" type="date">
+      <column length="10" name="DateIssued"/>
+    </property>
+    <property name="signedDate" type="date">
+      <column length="10" name="SignedDate"/>
+    </property>
+    <property name="whoIssuedRegulation" type="string">
+      <column length="500" name="WhoIssuedRegulation"/>
+    </property>
+    <property name="signer" type="string">
+      <column length="500" name="Signer"/>
+    </property>
+    <property name="fromDate" type="date">
+      <column length="10" name="FromDate"/>
+    </property>
+    <property name="toDate" type="date">
+      <column length="10" name="ToDate"/>
+    </property>
+    <property name="documentNo" type="string">
+      <column length="500" name="DocumentNo"/>
+    </property>
+    <property name="path" type="string">
+      <column length="4000" name="Path"/>
+    </property>
+    <property name="timeUpload" type="timestamp">
+      <column length="23" name="TimeUpload"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="contentOfDocuments" table="ContentOfDocument">
+      <key>
+        <column name="Document"/>
+      </key>
+      <one-to-many class="model.pojo.DocumentDetail"/>
+    </set>
+  </class>
+</hibernate-mapping>

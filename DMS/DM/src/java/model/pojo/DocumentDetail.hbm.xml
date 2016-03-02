@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 28, 2016 2:13:38 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="DM" name="model.pojo.DocumentDetail" optimistic-lock="version" schema="dbo" table="ContentOfDocument">
+    <id name="contentId" type="int">
+      <column name="ContentId"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="model.pojo.Document" fetch="select" name="document">
+      <column name="DocumentId"/>
+    </many-to-one>
+    <property name="contentText" type="string">
+      <column length="4000" name="ContentText"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 28, 2016 2:13:38 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="DM" name="model.pojo.Role" optimistic-lock="version" schema="dbo" table="Role">
+    <id name="roleId" type="int">
+      <column name="RoleId"/>
+      <generator class="identity"/>
+    </id>
+    <property name="roleName" type="string">
+      <column length="500" name="RoleName" not-null="true"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="users" table="Users">
+      <key>
+        <column name="RoleId"/>
+      </key>
+      <one-to-many class="model.pojo.Users"/>
+    </set>
+  </class>
+</hibernate-mapping>

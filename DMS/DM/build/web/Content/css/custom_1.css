@@ -1,0 +1,47 @@
+/*---------------------------------------------------------------
+# Package - Joomla Template based on CGrocket Framework   
+# ---------------------------------------------------------------
+# Author - CGrocket http://www.cgrocket.com
+# Copyright (C) 2011 - 2012 CGrocket.com. All Rights Reserved.
+# license - PHP files are licensed under  GNU/GPL V2
+# license - CSS  - JS - IMAGE files  are Copyrighted material 
+# Websites: http://www.cgrocket.com - http://www.leweb2.com
+-----------------------------------------------------------------*/
+#slides {padding-top:10px}
+div .sp-slide-desc{bottom:80px!important;height:80px!important;overflow:hidden;}
+.thumb_bg{background:#000 url(../images/thumb-border.png) repeat-x 0 95%!important}
+div .active .thumb_bg {color:#fff}
+.handles .thumb_bg h4.title {font-size: 18px;color:#979797;font-weight:normal;margin:0 0 5px 0}
+div.handles.active h4.title {color:#fff!important}
+
+h2.sp-slide-title,h2.sp-slide-title a{color:#e5e5e5;font-weight:bold;font-size:14px;letter-spacing:normal;margin:0 0 5px 0;padding:0}
+p.sp-slide-intro{color:#fff}
+
+#addons .mod-block {padding-bottom:0}
+#whois {text-align:right}
+img.sp-news-image {background:#fff;padding:4px;border:1px solid #e5e5e5}
+
+/*Top Panel*/
+#sp-toppanel{border:1px solid #ddd;border-top:0!important}
+
+/*Mortgage Calculator*/
+div #mortgage_calculator label {font-size:12px;font-weight:400;width:120px!important;padding:4px 0 5px 0}
+#mortgage_calculator input {width:130px}
+div #mc_result_text{line-height:normal}
+div #mc_result{font-family:Georgia,"Times New Roman",Times,serif;line-height:normal;margin:0}
+#mortgage_calculator input {margin: 0!important;}
+
+/*K2*/
+div.SPK2ExtraFields ul li{background:none;line-height:normal!important;margin:0;padding:5px 0!important}
+ul li.last{border-bottom:none!important}
+div.SPK2ExtraFields ul li.price span.value{color:#C03131;font-family:Georgia,"Times New Roman",Times,serif;font-style:italic;font-weight:700}
+div.SPK2ExtraFields,div.SPK2ExtraFields ul{margin:.8em 0}
+div.SPK2ExtraFields ul li span.label{display:block;float:left;font-weight:700;width:30%;margin:0 4px 0 0}
+
+/*K2 Store*/
+.mycart{background:#f5f5f5;border:1px solid #eaeaea;overflow:hidden;margin:10px 0;padding:8px}
+.mycart form {display:block}
+.mycart span.product_price,
+.mycart .product_attributeoptions,
+.mycart .product_quantity_input,
+.mycart .add_to_cart {display:inline-block;margin:0 5px}

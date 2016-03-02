@@ -1,0 +1,212 @@
+/*---------------------------------------------------------------
+
+# Package - Joomla Template based on CGrocket Framework   
+
+# ---------------------------------------------------------------
+
+# Author - CGrocket http://www.cgrocket.com
+
+# Copyright (C) 2011 - 2012 CGrocket.com. All Rights Reserved.
+
+# license - PHP files are licensed under  GNU/GPL V2
+
+# Websites: http://www.cgrocket.com - http://www.leweb2.com
+
+-----------------------------------------------------------------*/
+
+
+
+/* Master Reset */
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;outline:0;font-size:100%;background:transparent;margin:0;padding:0}
+
+body{line-height:0}
+
+ol,ul{list-style:none}
+
+blockquote,q{quotes:none}
+
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+
+:focus{outline:0}
+
+ins{text-decoration:none}
+
+del{text-decoration:line-through}
+
+table{border-collapse:collapse;border-spacing:0}
+
+
+
+/* Core */
+
+body{color:#666;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.8}
+
+.sp-wrap{margin-left:auto;margin-right:auto}
+
+body.bg{background:#f5f5f5 url(../images/bg.jpg) fixed}
+
+.main-bg {background:#fff}
+
+.sp-block{float:left;display:inline}
+
+.mod-block {padding:10px}
+
+.sp-inner{padding-left:10px;padding-right:10px}
+
+.sp-inner a:link {color:#000;}
+
+.sp-inner a:visited {color:#000;}
+
+.sp-block .first {margin-left:-10px}
+
+.sp-block .last {margin-right:-10px}
+
+.sp-block .single {margin-left:-10px;margin-right:-10px}
+
+.gap{clear:both; margin-bottom:20px}
+
+.center a:link {color:#000080;}
+
+.center a:visited {color:#000080;}
+
+
+
+
+
+/*Header Area*/
+
+#header {position:relative}
+
+a#logo,#logo-text{float:left}
+
+a#logo{background:url(../images/logo.png) no-repeat 0 50%}
+
+#logo-text h1{font-size:200%;font-weight:bold;text-transform:uppercase;border:0!important;margin:10px 0 0!important;padding:0!important}
+
+#logo-text h1 a{}
+
+#logo-text p.site-slogan{margin:0;padding:0;color:#999}
+
+
+
+#banner {float:right;}
+
+
+
+/*Search*/
+
+#search{position:absolute;bottom:-34px;right:10px;z-index:1}
+
+#search input#mod-search-searchword{height:24px;line-height:24px;background:none;border:none;margin:0;padding:0}
+
+.mod-search{height:24px;line-height:24px;color:#777;border:1px solid #333;margin:0;padding:0 5px 0 20px;background:#151515 url(../images/search.png) no-repeat 5px 50%}
+
+
+
+/*Module positions user1-user4*/
+
+#sp-bottom {border-top:1px solid #e5e5e5;background:#fff url(../images/bottom-bg.gif) repeat-x 0 100%;color:#777;font-size:11px;}
+
+#sp-bottom .mod-block {padding:10px 20px 10px 15px!important}
+
+#sp-bottom .separator .mod-block{border-right:1px solid #e5e5e5}
+
+
+
+/* Layout */
+
+#sp-leftcol, #sp-rightcol, #sp-maincol ,#sp-inset1, #sp-inset2, #inner_content {float:left}
+
+#sp-leftcol, #sp-rightcol, #sp-maincol {padding:10px 0}
+
+
+
+/*Font Resizer*/
+
+div.font-sizer{width:45px;height:16px;line-height:16px;position:absolute;z-index:1;top:5px;right:10px}
+
+div.font-sizer a.btn_fs_big,div.font-sizer a.btn_fs_reset,div.font-sizer a.btn_fs_small
+
+{background-image:url(../images/font-resizer.png);background-repeat:no-repeat;height:16px;width:15px;border:medium none;cursor:pointer;display:block;float:left;text-indent:-999em;padding:0}
+
+div.font-sizer a.btn_fs_big{background-position:0 0}
+
+div.font-sizer a.btn_fs_reset{background-position:-15px 0}
+
+div.font-sizer a.btn_fs_small{background-position:-30px 0}
+
+div.font-sizer a.btn_fs_big:hover{background-position:0 -16px}
+
+div.font-sizer a.btn_fs_reset:hover{background-position:-15px -16px}
+
+div.font-sizer a.btn_fs_small:hover{background-position:-30px -16px}
+
+/*BREADCRUMBS*/
+
+#breadcrumbs.sp-inner{padding:15px 10px 0 10px}
+
+#breadcrumbs a,#breadcrumbs span,#breadcrumbs strong{display:block;float:left}
+
+#breadcrumbs a,#breadcrumbs span.separator{margin-right:10px;padding-right:15px;background:url(../images/breadcrumbs.png) 100% 50% no-repeat}
+
+#breadcrumbs span.current{color:#666}
+
+
+
+/* Footer */
+
+#sp-footer{margin-bottom:0; padding:10px}
+
+#sp-footer .cp {float: left; color:#696969 ; font-size:12px;}
+
+
+
+/*Footer Navigation*/
+
+#footer-nav{float:right}
+
+#footer-nav ul{list-style-type:none;padding:0;margin:0 0 5px 0}
+
+#footer-nav li{background:none;padding:0;display:inline}
+
+#footer-nav a{font-size:11px;font-weight:normal;text-decoration:none;display:inline;margin:0;padding:0 8px}
+
+a#topofpage{padding:0 8px;font-size:11px;font-weight:normal;float:right ; color:#696969 ; font-size:12px;}
+
+
+
+/* cgrocket Logo */
+
+#powered-by{display:block;text-indent:-999em}
+
+.cgrocket-logo-light,.cgrocket-logo-dark,.cgrocket-logo-light-small,.cgrocket-logo-dark-small{display:block;float:left;padding:0 10px 0 0;margin:0 15px 0 0;border-right:1px solid #e5e5e5}
+
+.cgrocket-logo-light,.cgrocket-logo-dark,.cgrocket-logo-light a,.cgrocket-logo-dark a{height:33px;width:160px}
+
+.cgrocket-logo-light-small,.cgrocket-logo-dark-small,.cgrocket-logo-light-small a,.cgrocket-logo-dark-small a{height:36px;width:37px}
+
+.cgrocket-logo a{background-position:center center;background-repeat:no-repeat;display:block;text-indent:-999em}
+
+.cgrocket-logo-light a{background-image:url(../images/cgrocket-logo/cgrocket_light.png)}
+
+.cgrocket-logo-dark a{background-image:url(../images/cgrocket-logo/cgrocket_dark.png)}
+
+.cgrocket-logo-light-small a{background-image:url(../images/cgrocket-logo/cgrocket_light_small.png)}
+
+.cgrocket-logo-dark-small a{background-image:url(../images/cgrocket-logo/cgrocket_dark_small.png)}
+
+
+
+/* Clearfix */
+
+.clr{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}
+
+.clearfix:after{clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0}
+
+* html .clearfix,:first-child+html .clearfix{zoom:1}
+
+
+#mxcpr{
+
+}

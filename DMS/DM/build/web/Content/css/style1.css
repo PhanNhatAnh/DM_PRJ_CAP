@@ -1,0 +1,42 @@
+/*---------------------------------------------------------------
+# Package - Joomla Template based on CGrocket Framework   
+# ---------------------------------------------------------------
+# Author - CGrocket http://www.cgrocket.com
+# Copyright (C) 2011 - 2012 CGrocket.com. All Rights Reserved.
+# license - PHP files are licensed under  GNU/GPL V2
+# Websites: http://www.cgrocket.com - http://www.leweb2.com
+-----------------------------------------------------------------*/
+
+a{color:#ba3500}
+a:hover,a:active,a:focus{color:#333}
+
+.handles.active .thumb_arrow{background-image:url(../../images/styles/style1/active-thumb1.png)!important; background-repeat: no-repeat; background-position: 0 50%!important}
+div .active .thumb_bg {background:#ba3500!important}
+
+h3.header{color: #ba3500}
+
+/*Menu*/
+#hornav ul.level-0 > li:hover{background:#fff !important;}
+#hornav ul.level-0 > li.menu-item.active{background:#a4d323!important;}
+#hornav ul.level-0 > li.menu-item.active > a.menu-item,#hornav ul.level-0 > li.menu-item:hover > a.menu-item
+{color:#fff}
+
+#sublevel ul.level-1 > li:hover,#sublevel ul.level-1 > li.menu-item.active{background:#ba3500!important}
+#sublevel ul.level-1 > li.menu-item.active > a.menu-item,#sublevel ul.level-1 > li.menu-item:hover > a.menu-item
+{}
+
+#hornav ul.level-0 > li.menu-item:hover span.menu-desc,#hornav ul.level-0 > li.menu-item.active span.menu-desc,
+#sublevel ul.level-1 > li.menu-item:hover span.menu-desc,#sublevel ul.level-1 > li.menu-item.active span.menu-desc{color:#fff}
+
+.btn-search {
+    background: #FF8A00;
+    border-radius: 3px;
+    color: #fff;
+    display: block;
+    font-size: 92%;
+    font-weight: bold;
+    line-height: 1;
+    padding: 6px 8px;
+    text-transform: uppercase;
+    -webkit-border-radius: 3px;
+}

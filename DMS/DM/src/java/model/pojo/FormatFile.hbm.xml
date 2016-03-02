@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 28, 2016 2:13:38 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.pojo.FormatFile" table="FormatFile" schema="dbo" catalog="DM" optimistic-lock="version">
+        <id name="formartFileId" type="int">
+            <column name="FormartFileId" />
+            <generator class="assigned" />
+        </id>
+        <property name="formartFileName" type="string">
+            <column name="FormartFileName" not-null="true" length="50" />
+        </property>
+        <set fetch="select" inverse="true" lazy="true" name="documents" table="Document">
+            <key>
+                <column name="Type"/>
+            </key>
+            <one-to-many class="model.pojo.Document"/>
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 28, 2016 2:13:38 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.pojo.Category" table="Category" schema="dbo" catalog="DM" optimistic-lock="version">
+        <id name="categoryId" type="int">
+            <column name="CategoryId" />
+            <generator class="identity" />
+        </id>
+        <property name="categoryName" type="string">
+            <column name="CategoryName" not-null="true" length="2000"/>
+        </property>
+        <set name="documents" table="Document" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Category" />
+            </key>
+            <one-to-many class="model.pojo.Document" />
+        </set>
+    </class>
+</hibernate-mapping>

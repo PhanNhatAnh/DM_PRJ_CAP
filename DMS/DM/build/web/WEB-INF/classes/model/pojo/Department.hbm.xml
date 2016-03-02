@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 28, 2016 2:13:38 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.pojo.Department" table="Department" schema="dbo" catalog="DM" optimistic-lock="version">
+        <id name="departmentId" type="int">
+            <column name="DepartmentId" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="user" class="model.pojo.Users" fetch="select" lazy="false">
+            <column name="HeadDepartment" />
+        </many-to-one>
+        <property name="departmentName" type="string">
+            <column name="DepartmentName" not-null="true" length="4000"/>
+        </property>
+        <set name="users" table="Users" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="DepartmentId" />
+            </key>
+            <one-to-many class="model.pojo.Users" />
+        </set>
+    </class>
+</hibernate-mapping>

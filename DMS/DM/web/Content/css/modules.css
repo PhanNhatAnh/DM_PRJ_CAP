@@ -1,0 +1,93 @@
+/*---------------------------------------------------------------
+# Package - Joomla Template based on CGrocket Framework   
+# ---------------------------------------------------------------
+# Author - CGrocket http://www.cgrocket.com
+# Copyright (C) 2011 - 2012 CGrocket.com. All Rights Reserved.
+# license - PHP files are licensed under  GNU/GPL V2
+# Websites: http://www.cgrocket.com - http://www.leweb2.com
+-----------------------------------------------------------------*/
+
+/*Module type XHTML*/
+.mod-wrapper,.mod-wrapper-flat {position:relative}
+.mod-wrapper {background:#fff;padding:10px;position:relative}
+.module_none .mod-wrapper {border:0;background:none;padding:0}
+.module_none  .mod-wrapper .mod-inner {border:0}
+
+.mod-wrapper h3.header{background:url(../images/h3-bg.gif) repeat-x 0 100%;font-size:12px;line-height:35px;overflow:hidden;text-transform:uppercase;margin:-10px -10px 10px -10px;padding:0 10px}
+.mod-wrapper h3.header span{color:#2B2B2B}
+.module_text .mod-wrapper h3.header {font-size:9px;text-align:center}
+
+.mod-wrapper ul{list-style:none;margin:0;padding:0}
+.mod-wrapper li{background:none;border-bottom:1px solid #E5E5E5;font-size:12px;margin:0;padding:3px 0}
+.mod-wrapper li li{margin-left:10px;border-bottom:0!important}
+.mod-wrapper li a{text-decoration:none}
+.mod-wrapper li:hover > a, .mod-wrapper li.active > a{text-decoration:none}
+
+/*_menu suffix*/
+.module_menu .mod-wrapper ul li{margin:0 -10px;padding:3px 10px!important}
+.module_menu .mod-wrapper ul li:hover, .module_menu .mod-wrapper ul li.active {background:#f5f5f5}
+
+/*Module Type Flat*/
+.mod-wrapper-flat h3.header{font-size:12px;font-weight:700;color:#000;margin:0;padding:2px 0}
+.mod-wrapper-flat ul{list-style:none;margin:0;padding:0}
+.mod-wrapper-flat li{font-size:11px;display:block;text-decoration:none;margin:0;padding:4px;background:none;border-bottom:1px dotted #c3c3c3;color:#858585;text-shadow:0 1px #fff}
+.mod-wrapper-flat li a{color:#858585}
+.mod-wrapper-flat a:hover{text-decoration:underline}
+#sp-bottom .mod-block{padding:20px 10px}
+
+
+/*Module Type Menu*/
+.mod-wrapper-menu {margin-top:8px}
+.mod-wrapper-menu h3.header{font-size:12px;font-weight:700;color:#fff;margin:0;padding:2px 5px}
+.mod-wrapper-menu ul{list-style:none;margin:0;padding:0}
+.mod-wrapper-menu li{font-size:11px;display:block;text-decoration:none;margin:0;padding:4px}
+.mod-wrapper-menu li a:hover{text-decoration:underline}
+
+/*Suffix as _none*/
+.module_none .mod-wrapper {padding:0}
+.module_none .mod-wrapper h3.header{background:none!important;margin:0;padding:0}
+
+/*Suffix _dark1*/
+.module_dark1 .mod-wrapper {background:#946050;color:#fff}
+.module_dark1 .mod-wrapper h3.header{background:#7f4c3c;color:#ffe2d9}
+/*Suffix _dark2*/
+.module_dark2 .mod-wrapper {background:#78a24f;color:#fff}
+.module_dark2 .mod-wrapper h3.header{background:#689041;color:#eefedf}
+/*Suffix _dark3*/
+.module_dark3 .mod-wrapper {background:#666666;color:#fff}
+.module_dark3 .mod-wrapper h3.header{background:#444;color:#e5e5e5}
+/*Suffix _dark4*/
+.module_dark4 .mod-wrapper {background:#618484;color:#fff}
+.module_dark4 .mod-wrapper h3.header{background:#476c6c;color:#eafefe}
+
+.module_dark1 .mod-wrapper h3.header span,.module_dark2 .mod-wrapper h3.header span,
+.module_dark3 .mod-wrapper h3.header span,.module_dark4 .mod-wrapper h3.header span{color:#f5f5f5}
+
+/*Suffix _light1*/
+.module_light1 .mod-wrapper {background:#f7ebe6}
+.module_light1 .mod-wrapper h3.header{background:#e4d2ca}
+/*Suffix _light2*/
+.module_light2 .mod-wrapper {background:#eeffde}
+.module_light2 .mod-wrapper h3.header{background:#d4e8c1}
+/*Suffix _light3*/
+.module_light3 .mod-wrapper {background:#f5f5f5}
+.module_light3 .mod-wrapper h3.header{background:#dddddd}
+/*Suffix _light4*/
+.module_light4 .mod-wrapper {background:#daeeee}
+.module_light4 .mod-wrapper h3.header{background:#c6dada}
+
+/*Badges*/
+span.badge_new,span.badge_free,span.badge_hot,span.badge_pick,span.badge_top,
+span.badge_login,span.badge_like,span.badge_mail,span.badge_cart,span.badge_event,span.badge_24h
+{height:48px;position:absolute;right:-3px;text-indent:-999em;top:-3px;width:48px;z-index:99}
+span.badge_new{background: url(../images/base_new.png) no-repeat 100% 0;}
+span.badge_free{background: url(../images/base_free.png) no-repeat 100% 0;}
+span.badge_hot{background: url(../images/base_hot.png) no-repeat 100% 0;}
+span.badge_pick{background: url(../images/base_pick.png) no-repeat 100% 0;}
+span.badge_top {background: url(../images/base_top.png) no-repeat 100% 0;}
+span.badge_login {background: url(../images/base_login.png) no-repeat 100% 0;}
+span.badge_like {background: url(../images/base_like.png) no-repeat 100% 0;}
+span.badge_mail {background: url(../images/base_mail.png) no-repeat 100% 0;}
+span.badge_cart {background: url(../images/base_cart.png) no-repeat 100% 0;}
+span.badge_event {background: url(../images/base_event.png) no-repeat 100% 0;}
+span.badge_24h {background: url(../images/base_24h.png) no-repeat 100% 0;}
