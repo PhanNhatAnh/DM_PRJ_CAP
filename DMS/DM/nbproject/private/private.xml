@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Aking/Desktop/FU_HL/DMS/DM/src/java/hibernate.cfg.xml</file>
+            <file>file:/C:/Users/Aking/Desktop/FU_HL/DMS/DM/src/java/model/dao/CategoryDao.java</file>
+            <file>file:/C:/Users/Aking/Desktop/FU_HL/DMS/DM/src/java/controller/DepartmentController.java</file>
+            <file>file:/C:/Users/Aking/Desktop/FU_HL/DMS/DM/web/View/Category/create.jsp</file>
+            <file>file:/C:/Users/Aking/Desktop/FU_HL/DMS/DM/src/java/model/pojo/Category.java</file>
+            <file>file:/C:/Users/Aking/Desktop/FU_HL/DMS/DM/src/java/controller/CategoryController.java</file>
+            <file>file:/C:/Users/Aking/Desktop/FU_HL/DMS/DM/web/index.jsp</file>
+            <file>file:/C:/Users/Aking/Desktop/FU_HL/DMS/DM/web/View/Category/edit.jsp</file>
+        </group>
     </open-files>
 </project-private>
